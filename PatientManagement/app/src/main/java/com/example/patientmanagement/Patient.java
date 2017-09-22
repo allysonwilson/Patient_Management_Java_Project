@@ -9,14 +9,30 @@ public class Patient {
     private String name;
     private Status status;
     private Gender gender;
+    private int age;
 
-    public Patient (Status status, Gender gender) {
+    public Patient (String name, Status status, Gender gender, int age) {
+        this.name = name;
         this.status = status;
         this.gender = gender;
-
+        this.age= age;
     }
 
+    public String getName() {
+        return name;
+    }
 
+    public Status getStatus() {
+        return status;
+    }
+
+    public Gender getGender() {
+        return gender;
+    }
+
+    public int getAge() {
+        return age;
+    }
 }
 
 
