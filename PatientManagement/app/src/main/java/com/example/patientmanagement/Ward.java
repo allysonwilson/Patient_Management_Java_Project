@@ -11,7 +11,31 @@ public class Ward {
     public int capacity;
 
 
+    public Ward( int capacity ){
+        this.room = new ArrayList<>();
+        this.capacity = capacity;
+    }
+
+    public ArrayList<Patient> getRoom() {
+        return room;
+    }
+
+    public int getCapacity() {
+        return capacity;
+    }
+
+    public void admitPatient(Patient patient) {
+        if (room.size() < capacity) {
+            room.add(patient);
+        }
+
+    }
+
+    public void dischargePatient(Patient patient) {
+        room.remove( patient);
+    }
 }
 
-//add and remove patients
-//set capacity-Test won't take more patients past capacity, make multiple rooms, designate female/male-Test won't admit wrong gender
+
+
+//extension make multiple rooms, designate female/male-Test won't admit wrong gender
