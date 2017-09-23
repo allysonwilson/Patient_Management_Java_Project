@@ -20,27 +20,22 @@ public class PatientTest {
 
     @Test
     public void hasName(){
-//       arrange
-
-//        act
-
-//        assert
         assertEquals("Bill",  patient.getName() );
     }
 
-
-
-
     @Test
     public void hasStatus(){
-
-
+        assertEquals(Status.READY_FOR_DISCHARGE, patient.getStatus());
     }
-
 
     @Test
     public void hasGender(){
+        assertEquals(Gender.MALE, patient.getGender());
+    }
 
+    @Test
+    public void hasAge() {
+        assertEquals(77, patient.getAge());
+    }
 
-}
 }

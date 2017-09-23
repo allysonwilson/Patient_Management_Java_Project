@@ -8,7 +8,10 @@ import java.util.ArrayList;
 
 public class Ward {
     public ArrayList<Patient> room;
+    public int capacity;
 
 
 }
+
+//add and remove patients
 //set capacity-Test won't take more patients past capacity, make multiple rooms, designate female/male-Test won't admit wrong gender
