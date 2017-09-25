@@ -19,7 +19,7 @@ public class WardTest {
     @Before
     public void before(){
 
-        this.maternityWard = new Ward();
+        this.maternityWard = new Ward(Gender.FEMALE);
     }
 
     @Test
@@ -78,10 +78,19 @@ public class WardTest {
         assertEquals( 10, maternityWard.getRoom().size() );
     }
 
-//    @Test
-//    public void
-//    assertEquals();
+    @Test
+    public void CannotAdmitMaleToFemaleWard(){
 
+        Patient patientFemale = new Patient("Sally", Status.ADMITTED, Gender.FEMALE, 18, 75);
+        maternityWard.admitPatient(patientFemale);
+        assertEquals( 1, maternityWard.getRoom().size() );
+
+        Patient patientMale = new Patient("Bill", Status.READY_FOR_DISCHARGE, Gender.MALE, 77, 40 );
+
+        maternityWard.admitPatient(patientMale);
+
+        assertEquals( 1,  maternityWard.getRoom().size()  );
+    }
 }
 
 

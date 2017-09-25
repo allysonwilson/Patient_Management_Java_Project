@@ -9,22 +9,20 @@ import java.util.ArrayList;
 public class Ward {
     public ArrayList<Patient> room;
     public int capacity;
-    public Gender gender;
+    private Gender gender;
 
-//if you don't add a number then it auto-sets the capacity to 10
-    public Ward(){
+
+    public Ward(Gender gender){
         this.room = new ArrayList<>();
         this.capacity = 10;
-        this.gender = Gender.FEMALE;
+        this.gender = gender;
     }
-//If you do enter a number it sets that number to the capacity
-//    public Ward(int capacity){
-//        this.room = new ArrayList<>();
-//        this.capacity = capacity;
-//        this.gender = Gender.MALE;
-//    }
 
-    public ArrayList<Patient> getRoom() {return room;
+    public ArrayList<Patient> getRoom() {
+            return room;
+    }
+    public Gender getGender() {
+        return gender;
     }
 
     public int getCapacity() {
@@ -39,13 +37,19 @@ public class Ward {
     }
 
     public void dischargePatient(Patient patient) {
-        room.remove( patient);
+        room.remove( patient );
     }
 
-    public void adjustCapacity(int newCapacity) {
-        this.capacity = newCapacity;
+    public void admitCorrectGender(Patient patient) {
+        if (Patient.Gender() ) == (Ward.Gender() ) {
+            room.add( patient );
+        }
     }
+
+
+
 }
+
 
 
 
