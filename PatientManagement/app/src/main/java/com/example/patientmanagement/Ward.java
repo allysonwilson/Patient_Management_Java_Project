@@ -9,15 +9,16 @@ import java.util.ArrayList;
 public class Ward {
     public ArrayList<Patient> room;
     public int capacity;
+//    public Gender gender;
 
 
     public Ward( int capacity ){
         this.room = new ArrayList<>();
         this.capacity = capacity;
+//        this.gender = gender;
     }
 
-    public ArrayList<Patient> getRoom() {
-        return room;
+    public ArrayList<Patient> getRoom() {return room;
     }
 
     public int getCapacity() {

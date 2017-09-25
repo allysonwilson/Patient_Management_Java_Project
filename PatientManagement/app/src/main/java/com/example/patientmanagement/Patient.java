@@ -15,7 +15,7 @@ public class Patient {
         this.name = name;
         this.status = status;
         this.gender = gender;
-        this.age= age;
+        this.age = age;
     }
 
     public String getName() {

@@ -16,8 +16,6 @@ public class PatientTest {
     @Before
     public void before(){ patient = new Patient("Bill", Status.READY_FOR_DISCHARGE, Gender.MALE, 77 ) ; }
 
-
-
     @Test
     public void hasName(){
         assertEquals("Bill",  patient.getName() );
