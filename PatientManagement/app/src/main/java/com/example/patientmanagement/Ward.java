@@ -9,13 +9,12 @@ import java.util.ArrayList;
 public class Ward {
     public ArrayList<Patient> room;
     public int capacity;
-//    public Gender gender;
+    public Gender gender;
 
 //if you don't add a number then it auto-sets the capacity to 10
     public Ward(){
         this.room = new ArrayList<>();
         this.capacity = 10;
-//        this.gender = gender;
     }
 //If you do enter a number it sets that number to the capacity
     public Ward(int capacity){

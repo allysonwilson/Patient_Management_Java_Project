@@ -7,6 +7,5 @@ package com.example.patientmanagement;
 public enum Gender {
 
     MALE,
-    FEMALE,
-    TRANSGENDER
+    FEMALE
 }

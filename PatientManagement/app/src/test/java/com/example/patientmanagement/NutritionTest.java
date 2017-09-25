@@ -22,6 +22,7 @@ public class NutritionTest {
     @Before
     public void before(){
         ward = new Ward();
+        nutrition = new Nutrition();
 
         patient1 = new Patient("Jill", Status.ADMITTED, Gender.FEMALE, 25, 100) ;
         ward.admitPatient( patient1 ); ;

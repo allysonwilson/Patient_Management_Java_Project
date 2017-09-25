@@ -7,16 +7,13 @@ import java.util.ArrayList;
  */
 
 public class Nutrition {
-    public int health;
+    public Nutrition(){}
 
 
-
-
-  public int serveMealsTo(Ward ward)  {
+  public void serveMealsTo(Ward ward)  {
       for (Patient patient: ward.room){
           patient.eat( 20 );
       }
-      return health;
   }
 
 
