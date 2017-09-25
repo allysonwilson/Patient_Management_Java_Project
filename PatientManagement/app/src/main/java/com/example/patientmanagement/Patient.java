@@ -10,12 +10,14 @@ public class Patient {
     private Status status;
     private Gender gender;
     private int age;
+    private int health;
 
-    public Patient (String name, Status status, Gender gender, int age) {
+    public Patient (String name, Status status, Gender gender, int age, int health) {
         this.name = name;
         this.status = status;
         this.gender = gender;
         this.age = age;
+        this.health = health;
     }
 
     public String getName() {
@@ -33,6 +35,12 @@ public class Patient {
     public int getAge() {
         return age;
     }
+
+    public int getHealth() {
+        return health;
+    }
+
+    public void eat(int amount) { this.health += amount; }
 }
 
 

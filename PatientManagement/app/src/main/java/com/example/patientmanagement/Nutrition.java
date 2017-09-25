@@ -9,11 +9,14 @@ import java.util.ArrayList;
 public class Nutrition {
 
 
-  public void serveMealsToRoom(ArrayList<Patient> patients)  {
+  public void serveMealsToWard(ArrayList<Patient> patients)  {
       for (Patient patient: patients){
-          patient.eat();
+          patient.eat( 20 );
       }
+//      return
   }
 
 
 }
+
+//so all patients in ward's health should go up by 20 to test?

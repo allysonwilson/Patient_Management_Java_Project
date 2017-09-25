@@ -14,7 +14,7 @@ public class PatientTest {
     Patient patient;
 
     @Before
-    public void before(){ patient = new Patient("Bill", Status.READY_FOR_DISCHARGE, Gender.MALE, 77 ) ; }
+    public void before(){ patient = new Patient("Bill", Status.READY_FOR_DISCHARGE, Gender.MALE, 77, 40 ) ; }
 
     @Test
     public void hasName(){
@@ -34,6 +34,18 @@ public class PatientTest {
     @Test
     public void hasAge() {
         assertEquals(77, patient.getAge());
+    }
+
+    @Test
+    public void hasHealth(){
+        assertEquals(40, patient.getHealth() );
+    }
+
+    @Test
+    public void eatingIncreasesHealth(){
+
+        patient.eat( 20 );
+        assertEquals(60, patient.getHealth());
     }
 
 }
