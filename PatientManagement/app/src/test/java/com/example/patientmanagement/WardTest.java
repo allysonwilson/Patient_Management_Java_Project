@@ -80,16 +80,12 @@ public class WardTest {
 
     @Test
     public void CannotAdmitMaleToFemaleWard(){
-
+        Patient patientMale = new Patient("Bill", Status.READY_FOR_DISCHARGE, Gender.MALE, 77, 40 );
         Patient patientFemale = new Patient("Sally", Status.ADMITTED, Gender.FEMALE, 18, 75);
-        maternityWard.admitPatient(patientFemale);
+        maternityWard.admitCorrectGender(patientFemale);
+        maternityWard.admitCorrectGender(patientMale);
         assertEquals( 1, maternityWard.getRoom().size() );
 
-        Patient patientMale = new Patient("Bill", Status.READY_FOR_DISCHARGE, Gender.MALE, 77, 40 );
-
-        maternityWard.admitPatient(patientMale);
-
-        assertEquals( 1,  maternityWard.getRoom().size()  );
     }
 }
 

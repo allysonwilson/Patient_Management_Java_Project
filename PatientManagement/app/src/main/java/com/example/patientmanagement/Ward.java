@@ -9,7 +9,7 @@ import java.util.ArrayList;
 public class Ward {
     public ArrayList<Patient> room;
     public int capacity;
-    private Gender gender;
+    public Gender gender;
 
 
     public Ward(Gender gender){
@@ -41,16 +41,13 @@ public class Ward {
     }
 
     public void admitCorrectGender(Patient patient) {
-        if (Patient.Gender() ) == (Ward.Gender() ) {
+        if (patient.gender == this.gender) {
             room.add( patient );
         }
     }
-
-
 
 }
 
 
 
 
-//extension make multiple rooms, designate female/male-Test won't admit wrong gender

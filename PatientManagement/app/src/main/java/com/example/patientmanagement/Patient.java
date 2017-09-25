@@ -8,7 +8,7 @@ public class Patient {
 
     private String name;
     private Status status;
-    private Gender gender;
+    public Gender gender;
     private int age;
     private int health;
 
