@@ -15,12 +15,14 @@ public class Ward {
     public Ward(){
         this.room = new ArrayList<>();
         this.capacity = 10;
+        this.gender = Gender.FEMALE;
     }
 //If you do enter a number it sets that number to the capacity
-    public Ward(int capacity){
-        this.room = new ArrayList<>();
-        this.capacity = capacity;
-    }
+//    public Ward(int capacity){
+//        this.room = new ArrayList<>();
+//        this.capacity = capacity;
+//        this.gender = Gender.MALE;
+//    }
 
     public ArrayList<Patient> getRoom() {return room;
     }

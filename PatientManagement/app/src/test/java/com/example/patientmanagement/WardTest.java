@@ -19,7 +19,7 @@ public class WardTest {
     @Before
     public void before(){
 
-        this.maternityWard = new Ward(10);
+        this.maternityWard = new Ward();
     }
 
     @Test
@@ -75,13 +75,12 @@ public class WardTest {
         maternityWard.admitPatient(patient10);
         maternityWard.admitPatient(patient11);
 
-
-
         assertEquals( 10, maternityWard.getRoom().size() );
-
-
-
     }
+
+//    @Test
+//    public void
+//    assertEquals();
 
 }
 
