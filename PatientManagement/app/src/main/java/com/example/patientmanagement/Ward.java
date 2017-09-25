@@ -11,11 +11,16 @@ public class Ward {
     public int capacity;
 //    public Gender gender;
 
-
-    public Ward( int capacity ){
+//if you don't add a number then it auto-sets the capacity to 10
+    public Ward(){
+        this.room = new ArrayList<>();
+        this.capacity = 10;
+//        this.gender = gender;
+    }
+//If you do enter a number it sets that number to the capacity
+    public Ward(int capacity){
         this.room = new ArrayList<>();
         this.capacity = capacity;
-//        this.gender = gender;
     }
 
     public ArrayList<Patient> getRoom() {return room;
@@ -34,6 +39,10 @@ public class Ward {
 
     public void dischargePatient(Patient patient) {
         room.remove( patient);
+    }
+
+    public void adjustCapacity(int newCapacity) {
+        this.capacity = newCapacity;
     }
 }
 

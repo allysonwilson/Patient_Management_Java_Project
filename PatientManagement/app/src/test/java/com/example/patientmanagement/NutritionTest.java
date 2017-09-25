@@ -15,30 +15,31 @@ public class NutritionTest {
     Nutrition nutrition;
     Ward ward;
     Patient patient1;
+    Patient patient2;
+    Patient patient3;
+
 
     @Before
     public void before(){
-        ward = new Ward ;
+        ward = new Ward();
 
         patient1 = new Patient("Jill", Status.ADMITTED, Gender.FEMALE, 25, 100) ;
-        ward.add( patient1 ) ;
+        ward.admitPatient( patient1 ); ;
 
         patient2 = new Patient("Kirsty", Status.ADMITTED, Gender.FEMALE, 26, 75) ;
-        ward.add( patient2 ) ;
+        ward.admitPatient( patient2 ); ;
 
         patient3 = new Patient("Adele", Status.ADMITTED, Gender.FEMALE, 27, 80) ;
-        ward.add( patient3 ) ;
+        ward.admitPatient( patient3 ); ;
 
     }
 
     @Test
     public void mealDeliveryIncreasesWardsHealth(){
 
-
+        nutrition.serveMealsTo( ward );
         assertEquals(120, patient1.getHealth() );
-                nutrition.serveMealsToWard(ward);
         assertEquals(95, patient2.getHealth() );
-                nutrition.serveMealsToWard(ArrayList<Patient> ward);
         assertEquals(100, patient3.getHealth() );
 
 

@@ -79,7 +79,7 @@ public class WardTest {
 
         assertEquals( 10, maternityWard.getRoom().size() );
 
-//        boolean
+
 
     }
 
@@ -87,4 +87,3 @@ public class WardTest {
 
 
 
-//capacity ward has 4 rooms with 4 beds each total capacity = 16

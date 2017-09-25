@@ -7,16 +7,19 @@ import java.util.ArrayList;
  */
 
 public class Nutrition {
+    public int health;
 
 
-  public void serveMealsToWard(ArrayList<Patient> patients)  {
-      for (Patient patient: patients){
+
+
+  public int serveMealsTo(Ward ward)  {
+      for (Patient patient: ward.room){
           patient.eat( 20 );
       }
-//      return
+      return health;
   }
 
 
 }
 
-//so all patients in ward's health should go up by 20 to test?
+
