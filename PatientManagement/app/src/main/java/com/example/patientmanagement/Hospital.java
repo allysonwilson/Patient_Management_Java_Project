@@ -9,32 +9,46 @@ import java.util.HashMap;
 
 public class Hospital {
 
-    public Gender gender;
-    Ward ward;
-    private HashMap< String, Ward> hospital;
+    private HashMap< String, Ward> wards;
 
 
     public Hospital() {
-        hospital = new HashMap<>();
-        initHospital();
+        wards = new HashMap<>();
+
     }
 
-    private void initHospital(){
-        hospital.put("Maternity", ward);
-        hospital.put("Critical Care", ward);
-        hospital.put("Medical Surgical", ward);
-        hospital.put("General Surgery", ward);
-        hospital.put("Accident and Emergency", ward);
+    public HashMap<String, Ward> getWards() {
+        return wards;
     }
 
+    public void addWard(String name, Ward ward){
+        wards.put(name, ward);
+    }
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// addWard
+// use "instanceof" operator while retrieving the values from MAP.
 
 
 //    private boolean hospitalHasMaternityWard() {
 //        hospital.containsKey();
 //
 //    }
-
-
-}
-
-// use "instanceof" operator while retrieving the values from MAP.

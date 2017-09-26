@@ -15,16 +15,24 @@ public class HospitalTest {
 
     Hospital hospital;
 
+
     @Before
     public void before(){
        this.hospital = new Hospital();
+
+    }
+
+    @Test
+    public void hospitalStartsEmpty(){
+
+        assertEquals( true , hospital.getWards().isEmpty() );
     }
 
     @Test
     public void canAddWard(){
-
-
-        assertEquals( true, hospital.isEmpty() );
+        Ward ward = new Ward(Gender.UNISEX);
+        hospital.addWard("Accident and Emergency", ward);
+        assertEquals( ward , hospital.getWards().get("Accident and Emergency"));
     }
 
 
@@ -38,11 +46,6 @@ public class HospitalTest {
 
 
 
-
-    
-//    @Test
-//    public void hospitalHasMaternityWard()
-//            assertEquals( true, );
 
 
 }

@@ -29,6 +29,10 @@ public class WardTest {
     }
 
     @Test
+    public void canGetGender(){
+        assertEquals(Gender.FEMALE, maternityWard.getGender());
+    }
+    @Test
     public void wardHasCapacity(){
         assertEquals( 10, maternityWard.getCapacity() );
     }
