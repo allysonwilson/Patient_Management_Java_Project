@@ -25,7 +25,7 @@ public class WardTest {
     @Test
     public void roomStartsEmpty() {
 
-        assertEquals(0, maternityWard.getRoom().size() );
+        assertEquals(0, maternityWard.getRooms().size() );
     }
 
     @Test
@@ -38,7 +38,7 @@ public class WardTest {
         Patient patient1 = new Patient("Jill", Status.ADMITTED, Gender.FEMALE, 25, 80);
         maternityWard.admitPatient(patient1 );
 
-        assertEquals( 1, maternityWard.getRoom().size() );
+        assertEquals( 1, maternityWard.getRooms().size() );
     }
 
     @Test
@@ -46,7 +46,7 @@ public class WardTest {
         Patient patient1 = new Patient("Jill", Status.ADMITTED, Gender.FEMALE, 25, 100);
         maternityWard.admitPatient(patient1 );
         maternityWard.dischargePatient(patient1);
-        assertEquals( 0 , maternityWard.getRoom().size() );
+        assertEquals( 0 , maternityWard.getRooms().size() );
     }
 
     @Test
@@ -75,7 +75,7 @@ public class WardTest {
         maternityWard.admitPatient(patient10);
         maternityWard.admitPatient(patient11);
 
-        assertEquals( 10, maternityWard.getRoom().size() );
+        assertEquals( 10, maternityWard.getRooms().size() );
     }
 
     @Test
@@ -84,7 +84,19 @@ public class WardTest {
         Patient patientFemale = new Patient("Sally", Status.ADMITTED, Gender.FEMALE, 18, 75);
         maternityWard.admitCorrectGender(patientFemale);
         maternityWard.admitCorrectGender(patientMale);
-        assertEquals( 1, maternityWard.getRoom().size() );
+        assertEquals( 1, maternityWard.getRooms().size() );
+    }
+
+    @Test
+    public void patientOffTelemetry(){
+        Patient patient11 = new Patient("Sally", Status.ADMITTED, Gender.FEMALE, 18, 75);
+        maternityWard.admitPatient(patient11 );
+
+        assertEquals( 1, maternityWard.getRooms().size() );
+
+        maternityWard.smokeBreak(patient11);
+        assertEquals( 0, maternityWard.getRooms().size() );
+//        needs random element for project extension completion
 
     }
 }

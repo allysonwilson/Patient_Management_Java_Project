@@ -43,9 +43,10 @@ public class PatientTest {
 
     @Test
     public void eatingIncreasesHealth(){
-
         patient.eat( 20 );
         assertEquals(60, patient.getHealth());
     }
+
+
 
 }

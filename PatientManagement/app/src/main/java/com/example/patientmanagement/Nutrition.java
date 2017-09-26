@@ -11,7 +11,7 @@ public class Nutrition {
 
 
   public void serveMealsTo(Ward ward)  {
-      for (Patient patient: ward.room){
+      for (Patient patient: ward.rooms){
           patient.eat( 20 );
       }
   }

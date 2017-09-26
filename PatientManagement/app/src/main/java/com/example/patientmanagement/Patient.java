@@ -41,6 +41,8 @@ public class Patient {
     }
 
     public void eat(int amount) { this.health += amount; }
+
+
 }
 
 
