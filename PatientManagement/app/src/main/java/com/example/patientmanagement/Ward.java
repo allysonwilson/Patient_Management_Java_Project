@@ -46,10 +46,6 @@ public class Ward {
         }
     }
 
-    public void smokeBreak( Patient patient ) {
-            rooms.remove( patient );
-     }
-
 }
 
 
