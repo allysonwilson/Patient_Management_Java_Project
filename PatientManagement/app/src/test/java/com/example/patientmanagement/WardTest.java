@@ -91,18 +91,18 @@ public class WardTest {
         assertEquals( 1, maternityWard.getRooms().size() );
     }
 
-    @Test
-    public void patientOffTelemetry(){
-        Patient patient11 = new Patient("Sally", Status.ADMITTED, Gender.FEMALE, 18, 75);
-        maternityWard.admitPatient(patient11 );
-
-        assertEquals( 1, maternityWard.getRooms().size() );
-
-        maternityWard.smokeBreak(patient11);
-        assertEquals( 0, maternityWard.getRooms().size() );
+//    @Test
+//    public void patientOffTelemetry(){
+//        Patient patient11 = new Patient("Sally", Status.ADMITTED, Gender.FEMALE, 18, 75);
+//        maternityWard.admitPatient(patient11 );
+//
+//        assertEquals( 1, maternityWard.getRooms().size() );
+//
+//        maternityWard.smokeBreak(patient11);
+//        assertEquals( 0, maternityWard.getRooms().size() );
 //        needs random element for project extension completion
 
-    }
+//    }
 }
 
 
